@@ -53,8 +53,22 @@
     
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="index.js"></script>
+    <script src="toolBtns.js"></script>
     <script src="jquery.color.plus-names-2.1.2.js"></script>
     <script src="VocPro/genderify.js"></script>
     <script src="VocPro/vocabulary.js"></script>
+    <script>
+      function pns(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET","https://api.pons.com/v1/dictionary?q=Haus&l=deen&in=de&fm=0&ref=false&language=en",true);
+        xhr.setRequestHeader("X-Secret","dbf40f9801bab9f2dfc54c85fb130f793426d0e2643573d8ee7ecde6300ce308");
+        xhr.send();
+        xhr.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200){
+        expJSON = this.responseText;
+        }
+      };
+      }
+    </script>
   </body>
 </html>

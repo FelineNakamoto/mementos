@@ -1,5 +1,4 @@
-// var input = new Array();
-var timeout;
+var expJSON;
 var mistakes = new Set();
 var word = $('#word');
 var gInput = $('.gender');
@@ -16,118 +15,18 @@ var mColor = 'tomato';
 var nColor = 'steelblue';
 var fColor = 'limegreen';
 var toolBgc = ["white","lightgray"];
-var brighten = function(){
-	jQuery("body").animate({
-		backgroundColor: jQuery.Color('white')
-  }, 500);
-}
-var darken = function(){
-  jQuery("body").animate({
-    backgroundColor:'#2C3E50'
-  }, 500);
-}
 
-var fnArr = [brighten,darken];
 $(document).ready(function(){
   gInput.eq(0).focus();
   defaultColor = word.css('color')   
 })
 
-jQuery("#nightModeBtn").click(function(){
-  fnArr[0]();
-  gInput.toggleClass('white-caret')
-  fnArr = fnArr.reverse();
-});
-
-
-$('#collapseBtn').click(function(){
-  $('.hdnft').slideToggle();
-})
-
-
-btns.click(function(){
-  $(this).toggleClass('btnActive');
-})
-
-$('#mailSubmit').click(function(){
-  if(validateEmail(mInput.val())){
-    var arr = Array.from(mistakes);
-    alert(arr.toString())
-  }else {
-    $(this).hide();
-    $('#mailErr').show();
-  }
-})
-
-$('#mailBtn').click(function(){
-  inputSlide(mInput);
-  $('#mailSubmit').fadeToggle();
-})
-
-$('#searchBtn').click(function(){
-  eList.empty();
-  eList.toggle();
-  qInput.val('');
-  inputSlide(qInput);
-})
-
-
-eList.on('mousedown','li',function(){
-  loadWord($(this).text());
-  eList.toggle();
-})
-eList.on('mouseenter','li',function(){
-  switch(vocabulary[$(this).text()]){
-    case 'der': $(this).addClass('mBg'); break;
-    case 'das': $(this).addClass('nBg'); break;
-    case 'die': $(this).addClass('fBg'); break;
-    default: break;
-  }
-})
-
-eList.on('mouseleave','li',function(){
-  switch(vocabulary[$(this).text()]){
-    case 'der': $(this).removeClass('mBg'); break;
-    case 'das': $(this).removeClass('nBg'); break;
-    case 'die': $(this).removeClass('fBg'); break;
-    default: break;
-  }
-})
-
-qInput.keyup(function(){
-  var result = getEntry(qInput.val());
-  if(result.length>0){
-    eList.empty();
-    if(result.length>5) result = result.slice(0,5);
-    result.forEach(function(el){
-      $('<li/>').text(el).appendTo(eList);
-    })
-  }else qInput.addClass('redBorder');
-})
-
-$('#listBtn').click(function(){
-    mistakeList.empty();
-    var arr = Array.from(mistakes);
-    arr.forEach(function(el){
-        var li = $('<li/>').text(el).appendTo(mistakeList);
-    })
-    mistakeList.fadeToggle();
-})
-
-mistakeList.on('click','li',function(){
-  loadWord($(this).text());
-})
-
 gInput.blur(function(){
-  $(this).removeClass('on');
+   $(this).removeClass('on');
 })
-
 gInput.focus(function(){
   $(this).addClass('on');
 })
-
-
-
 gInput.keyup(function(event){
     if (event.keyCode >= 65 && event.keyCode <= 90){
       var letter = String.fromCharCode(event.keyCode).toLowerCase();
@@ -160,7 +59,6 @@ gInput.keyup(function(event){
   })
 
 function check(){
-//   var str = input.toString().replace(/,/g,'');
   var str = gInput.eq(0).text() + gInput.eq(1).text() + gInput.eq(2).text();
   if(str == vocabulary[word.text()]){
     switch(str){
