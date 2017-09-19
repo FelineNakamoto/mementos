@@ -1,0 +1,50 @@
+.readwrite {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  outline: none;
+}
+.gender{
+  font-size: 70px;
+  margin-right: 20px;
+  color: Dimgray;
+  opacity: 0.3;
+  text-decoration: underline; 
+  -webkit-user-select: none;
+  user-select: none;
+  width: 40px;
+  caret-color:white;
+}
+.gender::selection{
+  background-color:white;
+}
+#mistakeList{
+  display: none;
+}
+#word{
+  font-family: 'Roboto Slab', serif;
+  color:lightslategrey;
+  opacity: 0.8;
+  font-size: 70px;
+  letter-spacing:5px;
+  vertical-align: top;
+  margin-left:20px;
+}
+#word::selection{
+  background-color:white;
+  text-shadow: 2px 2px 2px salmon;
+}
+/* .btn{
+  margin:12px 10px;
+}
+
+#toolbar input{
+  height: 26px;
+  position: relative;
+  top: 20px;
+}
+#queryInput{
+  margin-left: 20px;
+}
+#toolbar{
+  overflow: hidden;
+} */

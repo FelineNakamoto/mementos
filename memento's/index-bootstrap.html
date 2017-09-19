@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="index-bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-expand-s navbar-light bg-light">
+      <a class="navbar-brand" href="home.html" id="caption">Garden</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#" target="_blank">What's new</a>
+          <div class="dropdown">
+            <a class="nav-item nav-link" data-toggle="dropdown" target="_blank">Leisure
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-menu bg-light">
+              <a class="dropdown-item" target="_blank">Book</a>
+              <a class="dropdown-item" target="_blank">Movie</a>
+              <a class="dropdown-item" target="_blank">Music</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" target="_blank">Photograghy</a>
+              <a class="dropdown-item" target="_blank">Travel jounal</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" target="_blank">Gourment</a>
+            </div>
+          </div>
+          <a class="nav-item nav-link active" href="index-bootstrap.html" target="_blank">Memento's</a>
+          <a class="nav-item nav-link" href="#" target="_blank">About</a>
+          <a class="nav-item nav-link disabled" href="#">More</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row" id="toolbar">
+        <div class="btn-toolbar" role="toolbar">
+          <div class="btn-group mr-2" role="group">
+            <button type="button" class="btn btn-secondary">
+                <i class="material-icons" id="searchBtn" data-toggle="tooltip" title="search in library" data-placement="bottom">search</i>            
+            </button>
+            <input type="text" spellcheck="false" class="readwrite" id="queryInput" placeholder="query"></input>
+            <button type="button" class="btn btn-secondary">
+                <i class="material-icons" id="expBtn" data-toggle="tooltip" title="look up in dictionary" data-placement="bottom">description</i>            
+            </button>
+            <button type="button" class="btn btn-secondary">
+                <i class="material-icons" id="listBtn"  data-toggle="tooltip" title="show mistake list" data-placement="bottom">list</i>            
+            </button>
+            <button type="button" class="btn btn-secondary">
+                <i class="material-icons" id="clockBtn" data-toggle="tooltip" title="set up timer" data-placement="bottom">access_time</i>            
+            </button>
+          </div>
+          <div class="btn-group mr-2" role="group">
+            <button type="button" class="btn btn-secondary">
+              <i class="material-icons" id="settingsBtn">settings</i>            
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <i class="material-icons" id="soundBtn">volume_mute</i>            
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <i class="material-icons" id="nightModeBtn" data-toggle="tooltip" title="turn on night mode" data-placement="bottom">invert_colors</i>            
+            </button>
+            <button class="btn btn-secondary">
+              <i class="material-icons" id="collapseBtn" data-toggle="tooltip" title="collapse/expand" data-placement="bottom">eject</i>            
+            </button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary">
+              <i class="material-icons" id="shareBtn" data-toggle="tooltip" title="share to others" data-placement="bottom">share</i>
+            </button>
+          </div>
+        </div>
+        <!-- 
+        <input type="text" spellcheck="false" class="readwrite" id="mAddrInput" placeholder="Your E-mail address"></input> -->
+        <!-- <i class="material-icons submit" id="mailSubmit">check</i>
+        <i class="material-icons error" id="mailErr">clear</i>
+        <i class="material-icons" id="mailBtn">mail</i> -->
+        <!-- <ul id="entryList" class="themeList"></ul> -->
+      </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-12" id="appCon">
+          <p class="line text-center">
+            <span class="readwrite gender" spellcheck="false">&nbsp  </span>
+            <span class="readwrite gender" spellcheck="false">&nbsp  </span>
+            <span class="readwrite gender" spellcheck="false">&nbsp  </span>
+            <span id="word">das einzige Wahre</span> 
+          </p>
+        </div>
+        <div class="col-3" id="mistakeList">
+          Jetzt ist die Zeit
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index-bootstrap.js"></script>
+    <script src="toolBtns.js"></script>
+    <script src="jquery.color.plus-names-2.1.2.js"></script>
+    <script src="VocPro/genderify.js"></script>
+    <script src="VocPro/vocabulary.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>

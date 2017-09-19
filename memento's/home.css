@@ -1,0 +1,13 @@
+#caption{
+  position: relative;
+}
+.{
+  border-radius: 0px;
+}
+
+#leisureCon{
+  position: relative;
+  height: 100px;
+  overflow-y: scroll;
+}
+
