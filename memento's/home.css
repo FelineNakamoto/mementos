@@ -1,13 +1,25 @@
 #caption{
   position: relative;
 }
-.{
-  border-radius: 0px;
+*{
+  border-radius: 0px !important;
+}
+#topNav{
+  box-shadow: 0 0 1em 0.5ex rgba(17, 17, 17, 0.5);
+}
+#crsl{
+  position: relative;
+}
+.navbar-nav .nav-link{
+  margin-right:4px;
 }
 
 #leisureCon{
   position: relative;
   height: 100px;
   overflow-y: scroll;
+}
+nav .dropdown-menu{
+  top: 47px;
 }
 

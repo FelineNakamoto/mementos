@@ -1,0 +1,41 @@
+nav .dropdown-menu{
+  top: 47px;
+}
+#topNav{
+  box-shadow: 0 0 1em 0.5ex rgba(17, 17, 17, 0.5);
+  border-top: 4px solid #3498DB;
+}
+#nav-tool{
+  position: fixed;
+  top: 75px;
+  font-size: 13px;
+}
+#nav-tool .nav-link:hover{
+  transform: scale3d(1.03, 1.03, 1.03);
+}
+table{
+  margin-top: 10px;
+}
+*{
+  border-radius: 0px !important;
+}
+a{
+  color:#3498DB;
+}
+.editable{
+  -webkit-user-modify: read-write;
+}
+.tense{
+  border-bottom:4px solid;
+}
+#infiCol{
+  border-bottom-color: #B3DFD8;
+}
+#pastCol{
+  border-bottom-color: #F2B705;
+}
+#perfectCol{
+  border-bottom-color: #F25C05 ;
+}
+
+

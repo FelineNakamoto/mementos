@@ -1,3 +1,21 @@
+*{
+  border-radius: 0px !important;
+}
+#caption{
+  position: relative;
+}
+*{
+  border-radius: 0px !important;
+}
+#topNav{
+  box-shadow: 0 0 1em 0.5ex rgba(17, 17, 17, 0.5);
+}
+#crsl{
+  position: relative;
+}
+.navbar-nav .nav-link{
+  margin-right:4px;
+}
 .readwrite {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
@@ -28,23 +46,24 @@
   letter-spacing:5px;
   vertical-align: top;
   margin-left:20px;
+  position: relative;
+  top: 9px;
 }
 #word::selection{
   background-color:white;
   text-shadow: 2px 2px 2px salmon;
 }
-/* .btn{
-  margin:12px 10px;
+#toolbar{
+  padding:30px 0px;
+}
+#appCon{
+  padding: 150px 20px;
 }
 
-#toolbar input{
-  height: 26px;
-  position: relative;
-  top: 20px;
+.alert{
+  display: none;
 }
+
 #queryInput{
-  margin-left: 20px;
+  display: none;
 }
-#toolbar{
-  overflow: hidden;
-} */

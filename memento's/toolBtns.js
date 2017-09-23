@@ -1,6 +1,6 @@
-btns.click(function(){
-  $(this).toggleClass('btnActive');
-})
+// btns.click(function(){
+//   $(this).toggleClass('btnActive');
+// })
 //search 
 $('#searchBtn').click(function(){
   eList.empty();
