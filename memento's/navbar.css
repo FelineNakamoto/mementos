@@ -1,0 +1,24 @@
+*{
+  border-radius: 0px !important;
+  font-family: "Futura Std"
+}
+#caption{
+  font-size: 22px;
+  position: relative;
+  top:-1.3px;
+  text-decoration-color: lightsalmon;
+  text-decoration: underline;
+  letter-spacing: 0.57px;
+}
+#topNav{
+  box-shadow: 0 0 1em 0.5ex rgba(17, 17, 17, 0.5);
+  padding: 10px 40px;
+  border-top: 4px solid #3498DB;
+  user-select: none;
+}
+.navbar-nav .nav-link{
+  margin-right:6px;
+}
+nav .dropdown-menu{
+  top: 50px;
+}

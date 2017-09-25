@@ -11,71 +11,30 @@
     crossorigin="anonymous">
   <link href="verb-table.css" rel="stylesheet">
   <link href="animate.css" rel="stylesheet">
+  <link href="navbar.css" rel="stylesheet">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-md navbar-expand-s navbar-light bg-light sticky-top" id="topNav">
-    <a class="navbar-brand" href="home.html" id="caption">Garden</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="home.html" target="_blank">What's new</a>
-        <div class="dropdown">
-          <a class="nav-item nav-link" data-toggle="dropdown" target="_blank">Leisure
-                  <i class="fa fa-caret-down"></i>
-                </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" target="_blank">Book</a>
-            <a class="dropdown-item" target="_blank">Movie</a>
-            <a class="dropdown-item" target="_blank">Music</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" target="_blank">Photograghy</a>
-            <a class="dropdown-item" target="_blank">Travel jounal</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" target="_blank">Gourment</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a class="nav-item nav-link active" target="_blank" data-toggle="dropdown">Reference
-                    <i class="fa fa-caret-down"></i>
-              </a>
-          <div class="dropdown-menu">
-            <h6 class="dropdown-header">Language</h6>
-            <a class="dropdown-item" href="#">English</a>
-            <a class="dropdown-item" href="#">Français</a>
-            <a class="dropdown-item active" href="verb-table.html">Deutsch</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Programming</h6>
-            <a class="dropdown-item" href="#">JavaScript</a>
-            <a class="dropdown-item" href="#">Web-design</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Other</a>
-          </div>
-        </div>
-        <a class="nav-item nav-link" href="index-bootstrap.html" target="_blank">Memento's</a>
-        <a class="nav-item nav-link" href="#" target="_blank">About</a>
-        <a class="nav-item nav-link disabled" href="#">More</a>
-      </div>
-    </div>
+    <!--js inject-->
   </nav>
   <div class="container">
     <div class="row">
-      <div class="col-2">
+      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
         <nav class="nav flex-column" id="nav-tool">
-          <a class="nav-link active" href="#B"></a>
-          <a class="nav-link animated" href="#" id="jumpTopBtn"><i class="fa fa-arrow-up"></i>&nbsp Back to top</a>
-          <a class="nav-link animated" id="searchBtn" href="#"><i class="fa fa-book"></i>&nbsp Look up in PONS</a>
-          <a class="nav-link animated" id="markBtn" href="#"><i class="fa fa-paint-brush"></i>&nbsp Mark up</a>
-          <a class="nav-link animated" id="addBtn" href="#"><i class="fa fa-bookmark"></i>&nbsp Memento's List</a>
-          <a class="nav-link animated" id="quizBtn" href="#"><i class="fa fa-check"></i>&nbsp Quiz</a>
-          <a class="nav-link animated" href="#"><i class="fa fa-plane"></i>&nbsp Jump to (Ctrl+F)</a>
-          <a class="nav-link animated" id="jumpBottomBtn" href="#bottom"><i class="fa fa-arrow-down"></i>&nbsp Go to bottom</a>
+          <a class="animated" href="#" id="jumpTopBtn"><i class="fa fa-arrow-up"></i>&nbsp Back to top</a>
+          <a class="animated" id="searchBtn" href="#"><i class="fa fa-book"></i>&nbsp Look up in PONS</a>
+          <a class="animated" id="markBtn"><i class="fa fa-paint-brush"></i>&nbsp Mark up</a>
+          <a class="animated" id="addBtn"><i class="fa fa-bookmark"></i>&nbsp Memento's List</a>
+          <a class="animated" id="quizBtn"><i class="fa fa-check"></i>&nbsp Quiz  &nbsp&nbsp<span class="badge">Try this!</span></a>
+          <a class="animated" id="counterBtn"><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>&nbsp&nbsp<span id="counter"></span>&nbsp&nbspRemaining</a>
+          <a class="animated" id="foldBtn"><i class="fa fa-paperclip"></i>&nbsp Fold</a>
+          <a class="animated" href="#"><i class="fa fa-plane"></i>&nbsp Jump to (Ctrl+F)</a>
+          <a class="animated" id="jumpBottomBtn" href="#bottom"><i class="fa fa-arrow-down"></i>&nbsp Go to bottom</a>
         </nav>
       </div>
-      <div class="col-10">
+      <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
         <table class="table table-bordered">
           <thead class="animated">
             <tr>
@@ -87,6 +46,19 @@
           <tbody>
           </tbody>
         </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="mdl">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
@@ -104,6 +76,7 @@
     crossorigin="anonymous"></script>
   <script src="verb-table.js"></script>
   <script src="./irregular-verbs/verbs.js"></script>
+  <script src="top-navbar.js"></script>
 </body>
 
 </html>

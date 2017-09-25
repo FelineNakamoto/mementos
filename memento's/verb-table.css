@@ -1,30 +1,80 @@
-nav .dropdown-menu{
-  top: 47px;
-}
-#topNav{
-  box-shadow: 0 0 1em 0.5ex rgba(17, 17, 17, 0.5);
-  border-top: 4px solid #3498DB;
+.modal-footer{
+  border-top-color: #F25C05;
+  border-top-width: 4px;
+  padding: 7px;
 }
 #nav-tool{
   position: fixed;
-  top: 75px;
+  top: 105px;
   font-size: 13px;
+  user-select: none;
 }
-#nav-tool .nav-link:hover{
+#nav-tool a{
+  color:#3498DB;
+  padding: .5rem 1rem
+}
+#nav-tool a:hover{
   transform: scale3d(1.03, 1.03, 1.03);
+  background-color: aliceblue;
+  text-decoration: none;
+}
+#counterBtn{
+  display: none;
+  color: #F2B705 !important;
+}
+#quizBtn{
+  cursor: pointer;
 }
 table{
   margin-top: 10px;
+  table-layout: fixed;
 }
-*{
-  border-radius: 0px !important;
+.badge{
+  letter-spacing: 0.7px;
+  background-color:  rgba(242, 183, 5, 0.4);
+  color: rgba(0, 0, 0, 0.7);
 }
-a{
-  color:#3498DB;
+.dropdown-item.active, 
+.dropdown-item:active{
+  background-color: #3498DB;
 }
 .editable{
   -webkit-user-modify: read-write;
+  white-space: nowrap;
 }
+.op-50{
+  opacity: 0.5;
+}
+.editable br{
+  display: none;
+}
+/* td.infinitive:hover{
+  background-color: rgba(179, 223, 216, 0.1)
+} */
+td{
+  letter-spacing: 0.63px;
+}
+td::selection{
+  background-color:rgba(242, 92, 5, 0.3);
+}
+td.pastTense{
+  outline-color:#F2B705;
+}
+/* td.pastTense:focus::after{
+  content: '?';
+  color:#3498DB;
+  position: relative;
+  left: 95%;
+} */
+/* td.pastTense:hover{
+  background-color: rgba(242, 183, 5, 0.1)
+} */
+td.presentPerfect{
+  outline-color:#F25C05
+}
+/* td.presentPerfect:hover{
+  background-color: rgba(242, 92, 5, 0.1)
+} */
 .tense{
   border-bottom:4px solid;
 }
@@ -39,3 +89,31 @@ a{
 }
 
 
+@media (max-width: 767px) { 
+  #nav-tool{
+    /* position: fixed; */
+    /* top: 105px; */
+    position: sticky;
+    top:0px;
+    font-size: 13px;
+    user-select: none;
+  }
+  #nav-tool a{
+    display: inline-block;
+  }
+  #counterBtn{
+    display: none !important;
+  }
+  #addBtn{  
+    display: none !important;
+  }
+  #markBtn{
+    display: none !important;
+  }
+  #foldBtn{
+    display: none !important;
+  }
+  #searchBtn{
+    display: none !important;
+  }
+}
