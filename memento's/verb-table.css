@@ -88,32 +88,3 @@ td.presentPerfect{
   border-bottom-color: #F25C05 ;
 }
 
-
-@media (max-width: 767px) { 
-  #nav-tool{
-    /* position: fixed; */
-    /* top: 105px; */
-    position: sticky;
-    top:0px;
-    font-size: 13px;
-    user-select: none;
-  }
-  #nav-tool a{
-    display: inline-block;
-  }
-  #counterBtn{
-    display: none !important;
-  }
-  #addBtn{  
-    display: none !important;
-  }
-  #markBtn{
-    display: none !important;
-  }
-  #foldBtn{
-    display: none !important;
-  }
-  #searchBtn{
-    display: none !important;
-  }
-}

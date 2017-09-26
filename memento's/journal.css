@@ -1,0 +1,43 @@
+.topic{
+  padding: 2rem;
+  letter-spacing: 0.73px;
+}
+hr{
+  color: salmon
+}
+.jcol{
+  height: 100%;
+  padding: 0rem 2rem 2rem 2rem;
+}
+.jcol.col-10{
+  border-left: 2px  salmon solid;
+}
+.jcol.col-2 h3{
+  text-indent: 1rem;
+  position: fixed;
+  top: 11rem;
+  letter-spacing: 0.3px;
+  opacity: 0.75;
+}
+.jcol.col-2 h3 span{
+   position: relative;
+   left: -2px;
+}
+.jcard{
+  padding: 1rem 0 0 0;
+  margin-bottom: 3rem;
+  background-color:  ghostwhite;
+}
+.card-body{
+  background-color: white;
+}
+.jcard img{
+  -webkit-filter: brightness(0.7);
+  -webkit-transition: -webkit-filter -webkit-transform 1000ms ;
+  transition: filter 500ms;
+}
+.jcard img:hover{
+  -webkit-filter: brightness(1);
+  -webkit-transform: scale(1.2);
+  cursor: pointer;
+}

@@ -14,7 +14,7 @@ var topNavbarInnerHTML = `<a class="navbar-brand" href="home.html" id="caption">
         <a class="dropdown-item" target="_blank">Music</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" target="_blank">Photograghy</a>
-        <a class="dropdown-item" target="_blank">Travel jounal</a>
+        <a class="dropdown-item" target="_blank" href="journal.html">Travel jounal</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" target="_blank">Gourment</a>
       </div>

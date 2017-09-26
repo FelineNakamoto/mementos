@@ -1,11 +1,11 @@
-var modes = ['preterite', 'perfect', 'both', 'off']
-var map = ['.pastTense', '.presentPerfect', 'both', 'off']
-var modeFlag = 3;
+const modes = ['preterite', 'perfect', 'both', 'off']
+const map = ['.pastTense', '.presentPerfect', 'both', 'off']
+var modeFlag = 3
 
 $(document).ready(function () {
   $('#topNav').html(topNavbarInnerHTML);
-  $('#rfrc').addClass('active');
-  refreshTable();
+  $('#rfrc').addClass('active')
+  refreshTable()
 })
 
 var refreshTable = function () {
@@ -20,12 +20,12 @@ var refreshTable = function () {
 }
 
 $('#searchBtn').click(function () {
-  var selection = window.getSelection().toString()
+  let selection = window.getSelection().toString()
   if (selection.length == 0) {
-    $('#mdl').modal();
-    $('#mdl').find('.modal-body p').text('Please select a word first');
+    $('#mdl').modal()
+    $('#mdl').find('.modal-body p').text('Please select a word first')
   } else {
-    let url = 'https://en.pons.com/translate?q=' + selection + '&l=deen&in=de&lf=de';
+    let url = 'https://en.pons.com/translate?q=' + selection + '&l=deen&in=de&lf=de'
     window.open(url, '_blank')
   }
 })
@@ -43,8 +43,8 @@ var setMode = function () {
   modeFlag == 2 || refreshTable()
   updateNum();
   modeFlag == 2 && $(map[0]).each(function (el) {
-    $(this).text(' ').addClass('editable')
-  })
+                      $(this).text(' ').addClass('editable')
+                    })
   modeFlag < 2 && clearAndFill()
 }
 
@@ -118,18 +118,21 @@ var getVerb = function (obj) {
   return obj.siblings('.infinitive').text()
 }
 var updateNum = function () {
-  $('#counter').text($('.unchecked').length);
+  let num = $('.unchecked').length
+  let $counter = $('#counter')
+  num == 10 && $counter.addClass('flash')
+  $counter.text($('.unchecked').length)
 }
 
 $('#jumpTopBtn').click(function () {
-  $('thead').addClass('bounce');
+  $('thead').addClass('bounce')
   var t = setTimeout(function () {
-    $('thead').removeClass('bounce');
-  }, 1000);
+    $('thead').removeClass('bounce')
+  }, 1000)
 })
 $('#jumpBottomBtn').click(function () {
-  $('#bottom').addClass('bounce');
+  $('#bottom').addClass('bounce')
   var t = setTimeout(function () {
-    $('#bottom').removeClass('bounce');
-  }, 1000);
+    $('#bottom').removeClass('bounce')
+  }, 1000)
 })
